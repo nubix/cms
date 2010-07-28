@@ -1,0 +1,1 @@
+<a class="menu" href="?a=%key%">%title%</a>

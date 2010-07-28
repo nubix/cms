@@ -1,0 +1,1 @@
+<a class="menu" %link% title="%tooltip%">%title%</a>

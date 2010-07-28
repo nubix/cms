@@ -1,0 +1,3 @@
+<table>
+	%item%
+</table>
