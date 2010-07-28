@@ -53,14 +53,6 @@ CREATE TABLE IF NOT EXISTS `cms_images` (
   PRIMARY KEY  (`id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=78 ;
 
---
--- Daten für Tabelle `cms_images`
---
-
-INSERT INTO `cms_images` (`id`, `name`, `description`, `file`, `file_t`) VALUES
-(77, 'Katzenauge', 'Edelstein', '8c1c08d04a915928b7ddb6bba0e5ec96.jpg', '8c1c08d04a915928b7ddb6bba0e5ec96_t.jpg'),
-(75, 'Anhänger', 'Bild vom Anhänger', 'de033298f6e44aaf5232b84567cd86de.jpg', 'de033298f6e44aaf5232b84567cd86de_t.jpg'),
-(76, 'Plakette', 'Eine Plakette', '32056bf8da93307320a22e276d29eaad.jpg', '32056bf8da93307320a22e276d29eaad_t.jpg');
 
 -- --------------------------------------------------------
 
