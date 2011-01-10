@@ -114,14 +114,17 @@ class classContent {
 		$qNavi = $mysql->query("SELECT * FROM "._PREFIX_."menu ORDER BY `order`");
 		while($o = mysql_fetch_object($qNavi))
 		{
+			$token = array(array("%link%", "%tooltip%", "%title%"));
 			if($o->type == 1)
-				$navi .= str_replace(array("%link%", "%tooltip%", "%title%"), array('href="?a=show&id='.$o->target.'"', $o->tooltip, $o->title), $tpl);
+				$token.array_push(array('href="?a=show&id='.$o->target.'"', $o->tooltip, $o->title));
 			elseif($o->type == 2)
-				$navi .= str_replace(array("%link%", "%tooltip%", "%title%"), array('href="'.$o->target.'" target="_blank"', $o->tooltip,  $o->title), $tpl);
+				$token.array_push(array('href="'.$o->target.'" target="_blank"', $o->tooltip,  $o->title));
 			elseif($o->type == 3)
-				$navi .= str_replace(array("%link%", "%tooltip%", "%title%"), array('href="?a=contact"', $o->tooltip, $o->title), $tpl);
+				$token.array_push(array('href="?a=contact"', $o->tooltip, $o->title));
 			else
-				$navi .= str_replace(array("%link%", "%tooltip%", "%title%"), array('class="nolink"', $o->tooltip, $o->title), $tpl);
+				$token.array_push(array('class="nolink"', $o->tooltip, $o->title));
+
+			$navi .= str_replace($token[0],$token[1], $tpl);
 			
 			
 		}
