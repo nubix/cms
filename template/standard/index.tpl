@@ -1,6 +1,6 @@
 <html>
 <head>
-	<title>%pagetitle% - modern-IT - CMS </title>
+	<title>%pagetitle%</title>
 <style type="text/css">
 body {
 	margin: 0px;
