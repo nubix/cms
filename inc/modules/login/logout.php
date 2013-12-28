@@ -12,14 +12,16 @@
 * Es sei denn login_post ist gesetzt was bedeutet der Nutzer
 * Hat sich gerade eben Angemeldet. Dann zeige eine erfolgsmeldung
 */
-global $user, $msg;
+global $user, $msg, $content;
 
 if(!$user->login_post)
 {
 	$user->logout();
 	$msg->success("Sie haben sich abgemeldet.");
+	$content->delModule("login");
 }
 else
 {
 	$msg->success("Sie haben sich angemeldet.");
+	$content->delModule("login");
 }

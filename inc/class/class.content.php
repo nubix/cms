@@ -96,7 +96,13 @@ class classContent {
 			$modules .= str_replace(array("%key%","%title%"), array($key, $value), $tpl);
 		return $modules;
 	}
-	
+
+	function delModule($module)
+	{
+		unset($this->modules[$module]);
+		--$this->moduleCount;
+	}
+
 	function addModule($module, $name)
 	{
 		$this->modules = array_merge($this->modules, array($module => $name));

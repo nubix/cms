@@ -6,7 +6,7 @@
 * Beschreibung : Ermöglicht dem Nutzer die Anmeldung
 */
 
-
+global $user, $content;
 /**
 * Sonderfall weil das Modullogin nur angezeigt werden soll wenn der
 * Nutzer schon eingeloggt ist.
